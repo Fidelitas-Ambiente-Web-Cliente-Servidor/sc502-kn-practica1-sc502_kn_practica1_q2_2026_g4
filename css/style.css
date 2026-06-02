@@ -1,48 +1,84 @@
+/* 
+Paleta de colores de Academia NovaTech:
+Azul oscuro: #1d3557
+Azul medio: #457b9d
+Azul claro: #eef4ff
+Blanco: #ffffff
+Gris claro: #f8f9fa
+Texto oscuro: #333333
+*/
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #070707;
 }
 
-nav {
-    background-color: #2C3E50;
+.navbar {
+    background-color: #1d3557;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px; 
+    padding: 18px 60px;
 }
 
-.nav-logo {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
+.logo h1 {
+    color: #d1c8c8;
+    font-size: 1.5rem;
 }
 
 .nav-links {
-    display: flex; 
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    margin-left: 20px; 
-    padding: 10px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
 }
 
-.nav-links a.active {
-    background-color: #E74C3C;
-    border-radius: 5px;
+.nav-links a:hover,
+.nav-links a.activo {
+    background-color: #457b9d;
 }
 
 footer {
-    background-color: #2C3E50;
-    color: white;
+    background-color: #1d3557;
+    color: #912222;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px 20px;
+}
+
+.footer-contenido p {
+    margin: 6px 0;
+}
+
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .logo h1 {
+        text-align: center;
+    }
 }
