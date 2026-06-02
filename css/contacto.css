@@ -1,0 +1,134 @@
+.header-contacto {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #457b9d;
+    color: #ffffff;
+}
+
+.header-contacto h1 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.header-contacto p {
+    font-size: 1.1rem;
+    color: #eef4ff;
+}
+
+.contenedor-contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 30px;
+    background-color: #f8f9fa;
+}
+
+.seccion-formulario {
+    background-color: #ffffff;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.seccion-formulario h2 {
+    color: #1d3557;
+    border-bottom: 2px solid #457b9d;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1d3557;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+    outline: none;
+    border-color: #457b9d;
+}
+
+.btn-enviar {
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #1d3557;
+}
+
+.seccion-info {
+    width: 400px;
+}
+
+.tarjeta-info,
+.tarjeta-mapa {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.tarjeta-info h2,
+.tarjeta-mapa h2 {
+    color: #1d3557;
+    border-bottom: 2px solid #457b9d;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.tarjeta-info p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.tarjeta-info strong {
+    color: #1d3557;
+}
+
+.tarjeta-mapa iframe {
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .contenedor-contacto {
+        padding: 20px;
+    }
+    .seccion-formulario,
+    .seccion-info {
+        width: 100%;
+    }
+}
