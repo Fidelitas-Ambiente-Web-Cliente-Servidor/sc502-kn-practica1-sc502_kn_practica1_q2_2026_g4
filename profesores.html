@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profesores | Academia Auratec</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/profesores.css?v=2">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Enlace al CSS específico de la página de profesores -->
+    <link rel="stylesheet" href="css/profesores.css">
 </head>
 <body>
 
+    <!-- Encabezado principal con el menú de navegación -->
     <header>
         <nav class="navbar">
             <div class="logo">
                 <h1>Academia Auratec</h1>
             </div>
 
+            <!-- Menú con enlaces a las páginas del sitio -->
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="cursos.html">Cursos</a></li>
@@ -27,6 +31,7 @@
 
     <main>
 
+        <!-- Sección inicial de la página -->
         <section class="profesores-header">
             <h2>Equipo de Profesores</h2>
             <p>
@@ -36,60 +41,13 @@
             </p>
         </section>
 
-        <section class="profesores-contenedor">
+        <!-- 
+            En esta sección se van a mostrar las tarjetas de profesores.
+            Las tarjetas no están escritas aquí porque se van a crear desde JavaScript.
+        -->
+        <section id="contenedorProfesores" class="profesores-contenedor"></section>
 
-            <article class="profesor-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkccQl5JmvLJ9jBec1phqj7siyu3ApQzykWA&s" alt="Profesora de desarrollo web">
-                <div class="profesor-info">
-                    <h3>Maritza Fernández</h3>
-                    <h4>Especialidad: Base de datos</h4>
-                    <p>
-                        Profesora con experiencia en HTML, CSS y diseño de sitios web modernos.
-                        Se enfoca en enseñar buenas prácticas para crear páginas atractivas,
-                        ordenadas y funcionales.
-                    </p>
-                </div>
-            </article>
-
-            <article class="profesor-card">
-                <img src="https://www.profecode.com/img/profe-1.webp" alt="Profesor de programación">
-                <div class="profesor-info">
-                    <h3>Carlos Ramírez</h3>
-                    <h4>Especialidad: Programación</h4>
-                    <p>
-                        Instructor especializado en lógica de programación, JavaScript y
-                        resolución de problemas. Su objetivo es que cada estudiante aprenda
-                        paso a paso desde las bases.
-                    </p>
-                </div>
-            </article>
-
-            <article class="profesor-card">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/037/823/296/small/ai-generated-smiling-male-teacher-in-classroom-with-elementary-school-students-learning-in-the-background-photo.jpeg" alt="Profesora de bases de datos">
-                <div class="profesor-info">
-                    <h3>Hernest Martínez</h3>
-                    <h4>Especialidad: Computo</h4>
-                    <p>
-                        Docente con conocimientos en computo que le enseña a los jovenes a manejar la computadora, sus partes, funciones y el uso de software básico.
-                    </p>
-                </div>
-            </article>
-
-            <article class="profesor-card">
-                <img src="https://png.pngtree.com/png-clipart/20240113/original/pngtree-elderly-computer-teacher-teaching-learning-professional-character-3d-occupation-png-image_14107823.png" alt="Profesor de diseño digital">
-                <div class="profesor-info">
-                    <h3>Andrés Vargas</h3>
-                    <h4>Especialidad: Diseño de imagenes</h4>
-                    <p>
-                        Profesor orientado al diseño visual, experiencia de usuario y creación
-                        de interfaces limpias. Ayuda a los estudiantes a mejorar la presentación
-                        de sus proyectos web.
-                    </p>
-                </div>
-            </article>
-
-        </section>
-
+        <!-- Sección de misión y visión de la academia -->
         <section class="mision-vision">
             <div class="bloque-info">
                 <h3>Misión</h3>
@@ -112,12 +70,46 @@
 
     </main>
 
+    <!-- 
+        Modal para mostrar la información completa del profesor.
+        Este modal se va a abrir cuando el usuario haga clic sobre una tarjeta.
+    -->
+    <div id="modalProfesor" class="modal-profesor">
+        <div class="modal-contenido">
+
+            <!-- Botón para cerrar el modal -->
+            <button id="btnCerrarModal" class="btn-cerrar">&times;</button>
+
+            <!-- Imagen del profesor seleccionada desde JavaScript -->
+            <img id="modalFoto" src="" alt="Foto del profesor" class="modal-foto">
+
+            <!-- Información del profesor que se llena desde JavaScript -->
+            <h2 id="modalNombre"></h2>
+            <h3 id="modalEspecialidad"></h3>
+            <p id="modalDescripcion"></p>
+
+            <!-- Detalles adicionales del profesor -->
+            <div class="modal-detalle">
+                <p><strong>Correo:</strong> <span id="modalCorreo"></span></p>
+
+                <p><strong>Cursos que imparte:</strong></p>
+                <ul id="modalCursos"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de página del sitio -->
     <footer>
         <div class="footer-contenido">
             <p>&copy; 2026 Academia Auratec. Todos los derechos reservados.</p>
-            <p>Redes sociales: Facebook | LinkedIn</p>
+            <p>Redes sociales: Facebook | Instagram | LinkedIn</p>
+            <p>Proyecto académico - Ambiente Web Cliente Servidor</p>
         </div>
     </footer>
+
+    
+    <script src="js/profesores.js"></script>
 
 </body>
 </html>
