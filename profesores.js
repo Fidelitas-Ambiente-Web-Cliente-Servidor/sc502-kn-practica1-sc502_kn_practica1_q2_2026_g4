@@ -2,19 +2,19 @@
 // Cada objeto guarda la información que se va a mostrar en la tarjeta y en el modal.
 const profesores = [
     {
-        nombre: "María Fernández",
+        nombre: "Maria Fernandez",
         especialidad: "Desarrollo Web",
         descripcion: "Profesora con experiencia en HTML, CSS y creación de sitios web modernos. Se enfoca en enseñar buenas prácticas para desarrollar páginas ordenadas, funcionales y atractivas.",
         foto: "https://images.pexels.com/photos/5212324/pexels-photo-5212324.jpeg",
-        correo: "maria.fernandez@novatech.com",
+        correo: "maria.fernandez@auratec.com",
         cursosQueImparte: ["HTML5 desde cero", "CSS3 moderno", "Diseño web responsive"]
     },
     {
-        nombre: "Carlos Ramírez",
+        nombre: "Carlos Ramirez",
         especialidad: "Programación",
         descripcion: "Instructor especializado en lógica de programación, JavaScript y resolución de problemas. Su objetivo es que los estudiantes aprendan paso a paso desde las bases.",
         foto: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg",
-        correo: "carlos.ramirez@novatech.com",
+        correo: "carlos.ramirez@auratec.com",
         cursosQueImparte: ["Lógica de programación", "JavaScript básico", "Introducción a algoritmos"]
     },
     {
@@ -22,7 +22,7 @@ const profesores = [
         especialidad: "Bases de Datos",
         descripcion: "Docente con conocimientos en modelado de datos, consultas SQL y administración básica de bases de datos. Promueve el aprendizaje práctico mediante ejercicios reales.",
         foto: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
-        correo: "laura.mendez@novatech.com",
+        correo: "laura.mendez@auratec.com",
         cursosQueImparte: ["SQL básico", "Modelado de bases de datos", "Consultas relacionales"]
     },
     {
@@ -30,7 +30,7 @@ const profesores = [
         especialidad: "Diseño Digital",
         descripcion: "Profesor orientado al diseño visual, experiencia de usuario y creación de interfaces limpias. Ayuda a los estudiantes a mejorar la presentación de sus proyectos web.",
         foto: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
-        correo: "andres.vargas@novatech.com",
+        correo: "andres.vargas@auratec.com",
         cursosQueImparte: ["Diseño de interfaces", "UX básico", "Prototipado digital"]
     }
 ];
