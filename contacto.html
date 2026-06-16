@@ -33,34 +33,40 @@
 
             <section class="seccion-formulario">
                 <h2>Formulario de Contacto</h2>
-                <form action="#" method="POST" class="formulario-contacto">
+                <p id="mensajeExito" class="mensaje-exito"></p>
+                <form id="formularioContacto" action="#" method="POST" class="formulario-contacto">
 
                     <div class="grupo-campo">
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                        <span id="error-nombre" class="mensaje-error"></span>
                     </div>
 
                     <div class="grupo-campo">
                         <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                        <span id="error-correo" class="mensaje-error"></span>
                     </div>
 
                     <div class="grupo-campo">
                         <label for="telefono">Teléfono:</label>
                         <input type="text" id="telefono" name="telefono" placeholder="Número de teléfono">
+                        <span id="error-telefono" class="mensaje-error"></span>
                     </div>
 
                     <div class="grupo-campo">
                         <label for="asunto">Asunto:</label>
                         <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje">
+                        <span id="error-asunto" class="mensaje-error"></span>
                     </div>
 
                     <div class="grupo-campo">
                         <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <span id="error-mensaje" class="mensaje-error"></span>
                     </div>
 
-                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                    <button type="submit" id="btnEnviar" class="btn-enviar" disabled>Enviar Mensaje</button>
                 </form>
             </section>
 
@@ -97,5 +103,6 @@
         </div>
     </footer>
 
+    <script src="js/contacto.js"></script>
 </body>
 </html>
