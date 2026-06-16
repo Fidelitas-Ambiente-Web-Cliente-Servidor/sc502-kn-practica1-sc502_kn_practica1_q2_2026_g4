@@ -7,7 +7,7 @@
 
 .header-contacto h1 {
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 2.5rem;
 }
 
@@ -20,25 +20,25 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 40px;
-    gap: 30px;
-    background-color: #f8f9fa;
+    gap: 20px;
+    padding: 40px 60px;
+    background-color: #eef4ff;
 }
 
 .seccion-formulario {
     background-color: #ffffff;
     width: 500px;
-    border: 1px solid #ddd;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     padding: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .seccion-formulario h2 {
-    color: #1d3557;
-    border-bottom: 2px solid #457b9d;
+    color: #457b9d;
+    border-bottom: 2px solid #1d3557;
     margin-bottom: 20px;
     padding-bottom: 8px;
+    font-size: 1.4rem;
 }
 
 .grupo-campo {
@@ -62,27 +62,52 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    transition: border-color 0.3s ease;
 }
 
 .grupo-campo input:focus,
 .grupo-campo textarea:focus {
-    outline: none;
     border-color: #457b9d;
+    outline: none;
+}
+
+.mensaje-error {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+}
+
+.mensaje-exito {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .btn-enviar {
     background-color: #457b9d;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 12px 25px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
 
-.btn-enviar:hover {
+.btn-enviar:hover:not(:disabled) {
     background-color: #1d3557;
+}
+
+.btn-enviar:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
 }
 
 .seccion-info {
@@ -92,11 +117,10 @@
 .tarjeta-info,
 .tarjeta-mapa {
     background-color: #ffffff;
-    border: 1px solid #ddd;
     border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     padding: 25px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .tarjeta-info h2,
@@ -105,7 +129,7 @@
     border-bottom: 2px solid #457b9d;
     margin-bottom: 15px;
     padding-bottom: 8px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .tarjeta-info p {
@@ -119,16 +143,35 @@
     color: #1d3557;
 }
 
-.tarjeta-mapa iframe {
-    border-radius: 8px;
-}
-
 @media (max-width: 700px) {
     .contenedor-contacto {
-        padding: 20px;
+        padding: 30px 20px;
     }
+
     .seccion-formulario,
     .seccion-info {
         width: 100%;
     }
+}
+
+.mensaje-error {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.mensaje-exito {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.btn-enviar:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
 }
