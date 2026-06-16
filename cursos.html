@@ -27,67 +27,22 @@
             <h1>Catálogo de Cursos</h1>
             <p>Encuentra el curso ideal para ti.</p>
             
-            <input type="text" class="buscador" placeholder="Buscar cursos...">
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+                <input type="text" id="buscador" class="buscador" style="margin-top: 0; width: 40%;" placeholder="Buscar por nombre o descripción...">
+                
+                <select id="filtro-categoria" class="buscador" style="margin-top: 0; width: 30%;">
+                    <option value="Todos">Todas las Categorías</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Diseño">Diseño</option>
+                    <option value="Herramientas">Herramientas</option>
+                </select>
+            </div>
         </header>
 
         <section class="categoria">
-            <h2>Desarrollo Web</h2>
-            
-            <div class="contenedor-cursos">
-                <article class="tarjeta-curso">
-                    <img src="img/html-css.jpg" alt="Curso HTML" class="img-curso">
-                    <h3>HTML5 y CSS3</h3>
-                    <p><strong>Categoría:</strong> Frontend</p>
-                    <p>Aprende a crear sitios web desde cero.</p>
-                    <p><em>Duración: 40 horas</em> | Precio: ₡50.000</p> 
-                </article>
-
-                <article class="tarjeta-curso">
-                    <img src="img/js.jpg" alt="Curso JS" class="img-curso">
-                    <h3>JavaScript Básico</h3>
-                    <p><strong>Categoría:</strong> Frontend</p>
-                    <p>Agrega interactividad a tus sitios.</p>
-                    <p><em>Duración: 50 horas</em> | Precio: ₡60.000</p>
-                </article>
-
-                <article class="tarjeta-curso">
-                    <img src="img/php.jpg" alt="Curso PHP" class="img-curso">
-                    <h3>PHP y MySQL</h3>
-                    <p><strong>Categoría:</strong> Backend</p>
-                    <p>Conecta tu web a bases de datos.</p>
-                    <p><em>Duración: 60 horas</em> | Precio: ₡70.000</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="categoria">
-            <h2>Diseño</h2>
-            
-            <div class="contenedor-cursos">
-                <article class="tarjeta-curso">
-                    <img src="img/ui.jpg" alt="Curso UI" class="img-curso">
-                    <h3>Diseño de Interfaces (UI)</h3>
-                    <p><strong>Categoría:</strong> Diseño</p>
-                    <p>Crea interfaces minimalistas.</p>
-                    <p><em>Duración: 30 horas</em> | Precio: ₡45.000</p>
-                </article>
-
-                <article class="tarjeta-curso">
-                    <img src="img/ux.jpg" alt="Curso UX" class="img-curso">
-                    <h3>Experiencia de Usuario (UX)</h3>
-                    <p><strong>Categoría:</strong> Diseño</p>
-                    <p>Mejora la navegación de tus usuarios.</p>
-                    <p><em>Duración: 35 horas</em> | Precio: ₡55.000</p>
-                </article>
-
-                <article class="tarjeta-curso">
-                    <img src="img/photoshop.jpg" alt="Curso Photoshop" class="img-curso">
-                    <h3>Photoshop para Web</h3>
-                    <p><strong>Categoría:</strong> Herramientas</p>
-                    <p>Edición de imágenes para tus proyectos.</p>
-                    <p><em>Duración: 20 horas</em> | Precio: ₡40.000</p>
-                </article>
-            </div>
+            <h2 id="titulo-categoria">Todos los Cursos</h2>
+            <div id="contenedor-cursos" class="contenedor-cursos"></div>
         </section>
     </main>
 
@@ -98,5 +53,6 @@
         </div>
     </footer>
 
+    <script src="js/cursos.js"></script>
 </body>
 </html>
