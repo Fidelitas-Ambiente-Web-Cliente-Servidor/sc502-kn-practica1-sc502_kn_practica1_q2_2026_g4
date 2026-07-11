@@ -131,3 +131,58 @@
         height: 100px;
     }
 }
+.btn-detalle {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #457b9d;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-detalle:hover {
+    background-color: #1d3557;
+}
+
+.detalle-profesor {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.detalle-card {
+    max-width: 600px;
+    background-color: #f8f9fa;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.detalle-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.detalle-card h3 {
+    color: #1d3557;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.detalle-card h4 {
+    color: #457b9d;
+    margin-bottom: 15px;
+}
+
+.detalle-card p {
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}

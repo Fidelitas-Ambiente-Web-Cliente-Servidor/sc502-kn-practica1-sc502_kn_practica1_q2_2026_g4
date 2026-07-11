@@ -135,3 +135,12 @@ modalProfesor.addEventListener("click", function(evento) {
 
 // Se ejecuta la función para mostrar los profesores cuando carga la página.
 renderizarProfesores();
+/*
+Aquí queda comentado el código de la Tarea 2.
+
+En la Tarea 2 las tarjetas de profesores se renderizaban dinámicamente
+desde JavaScript y se abría un modal al hacer clic.
+
+Para la Tarea 3 este código no se elimina, solo se comenta, porque ahora
+la información debe venir desde la base de datos usando PHP, MySQL y MVC.
+*/
