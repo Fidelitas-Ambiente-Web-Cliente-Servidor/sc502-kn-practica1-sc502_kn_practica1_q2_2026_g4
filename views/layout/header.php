@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profesores.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
 
