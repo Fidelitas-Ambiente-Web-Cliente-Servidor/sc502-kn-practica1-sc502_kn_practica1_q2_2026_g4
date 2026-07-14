@@ -1,0 +1,76 @@
+<main>
+
+    <header class="header-contacto">
+        <h1>Contacto</h1>
+        <p>¿Tienes dudas o deseas inscribirte? Escríbenos o visítanos.</p>
+    </header>
+
+    <div class="contenedor-contacto">
+
+        <section class="seccion-formulario">
+            <h2>Formulario de Contacto</h2>
+            <p id="mensajeExito" class="mensaje-exito"></p>
+            <form id="formularioContacto" action="index.php?controller=contacto&action=store" method="POST" class="formulario-contacto">
+
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                    <span id="error-nombre" class="mensaje-error"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <span id="error-correo" class="mensaje-error"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Número de teléfono">
+                    <span id="error-telefono" class="mensaje-error"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje">
+                    <span id="error-asunto" class="mensaje-error"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span id="error-mensaje" class="mensaje-error"></span>
+                </div>
+
+                <button type="submit" id="btnEnviar" class="btn-enviar" disabled>Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <aside class="seccion-info">
+            <div class="tarjeta-info">
+                <h2>Información de la Academia</h2>
+                <p><strong>Lugar:</strong> Universidad Fidélitas, Sede Heredia</p>
+                <p><strong>Dirección:</strong> Del Walmart de Heredia, 1,3 km al oeste, sobre carretera a la Aurora de Heredia, 40104</p>
+                <p><strong>Teléfono:</strong> +506 2206-8600</p>
+                <p><strong>Correo:</strong> info@academiaauratec.com</p>
+            </div>
+
+            <div class="tarjeta-mapa">
+                <h2>Nuestra Ubicación</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d-84.1456064!3d9.9916052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0faf89f62fc53%3A0x920a942930d65331!2sUniversidad%20Fid%C3%A9litas%20%E2%80%A2%20Heredia!5e0!3m2!1ses!2scr!4v1717284890000!5m2!1ses!2scr"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="js/contacto.js"></script>
+
+</main>
