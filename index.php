@@ -17,8 +17,11 @@ switch ($controller) {
         require_once "controllers/CursosController.php";
         $controlador = new CursosController();
         break;
-
-
+    
+    case "contacto":
+        require_once "controllers/ContactoController.php";
+        $controlador = new ContactoController();
+        break;
 
     default:
 
