@@ -2,22 +2,21 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Se obtienen los campos del formulario usando getElementById
-    let campoNombre = document.getElementById("nombre");
-    let campoCorroo = document.getElementById("correo");
+    let campoNombre   = document.getElementById("nombre");
+    let campoCorroo   = document.getElementById("correo");
     let campoTelefono = document.getElementById("telefono");
-    let campoAsunto = document.getElementById("asunto");
-    let campoMensaje = document.getElementById("mensaje");
-    let btnEnviar = document.getElementById("btnEnviar");
-    let formulario = document.getElementById("formularioContacto");
-    let mensajeExito = document.getElementById("mensajeExito");
+    let campoAsunto   = document.getElementById("asunto");
+    let campoMensaje  = document.getElementById("mensaje");
+    let btnEnviar     = document.getElementById("btnEnviar");
+    let formulario    = document.getElementById("formularioContacto");
 
     // Estas variables guardan si cada campo esta bien o no
     // Empiezan en false porque el formulario esta vacio al inicio
-    let nombreValido = false;
-    let correoValido = false;
+    let nombreValido   = false;
+    let correoValido   = false;
     let telefonoValido = false;
-    let asuntoValido = false;
-    let mensajeValido = false;
+    let asuntoValido   = false;
+    let mensajeValido  = false;
 
     // Esta funcion revisa si todos los campos son validos
     // Si todos son true, habilita el boton, si no, lo deshabilita
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let formatoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
 
         if (!formatoValido) {
-            mostrarError("error-correo", "Ingresa un correo vlido. Ejemplo: nombre@correo.com");
+            mostrarError("error-correo", "Ingresa un correo válido. Ejemplo: nombre@correo.com");
             campoCorroo.style.borderColor = "#e74c3c";
             correoValido = false;
         } else {
@@ -141,41 +140,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // "input" valida mientras el usuario escribe
     // "blur" valida cuando el usuario sale del campo
     campoNombre.addEventListener("input", validarNombre);
-    campoNombre.addEventListener("blur", validarNombre);
+    campoNombre.addEventListener("blur",  validarNombre);
 
     campoCorroo.addEventListener("input", validarCorreo);
-    campoCorroo.addEventListener("blur", validarCorreo);
+    campoCorroo.addEventListener("blur",  validarCorreo);
 
     campoTelefono.addEventListener("input", validarTelefono);
-    campoTelefono.addEventListener("blur", validarTelefono);
+    campoTelefono.addEventListener("blur",  validarTelefono);
 
     campoAsunto.addEventListener("input", validarAsunto);
-    campoAsunto.addEventListener("blur", validarAsunto);
+    campoAsunto.addEventListener("blur",  validarAsunto);
 
     campoMensaje.addEventListener("input", validarMensaje);
-    campoMensaje.addEventListener("blur", validarMensaje);
+    campoMensaje.addEventListener("blur",  validarMensaje);
 
-    // Cuando el usuario envia el formulario se muestra el mensaje de exito y se limpia el formulario
-    formulario.addEventListener("submit", function (evento) {
-        evento.preventDefault();
-
-        mensajeExito.textContent = "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.";
-        mensajeExito.style.display = "block";
-
-        formulario.reset();
-
-        // Se reinician los estados a false y se deshabilita el boton
-        nombreValido = false;
-        correoValido = false;
+    // Cuando el formulario es valido se envia el POST al servidor (ContactoController@store)
+    formulario.addEventListener("submit", function () {
+        nombreValido   = false;
+        correoValido   = false;
         telefonoValido = false;
-        asuntoValido = false;
-        mensajeValido = false;
+        asuntoValido   = false;
+        mensajeValido  = false;
         btnEnviar.disabled = true;
-
-        // El mensaje de exito desaparece despues de 4 segundos
-        setTimeout(function () {
-            mensajeExito.style.display = "none";
-        }, 4000);
     });
 
 });
