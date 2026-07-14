@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
     
     const cursos = [
         {
@@ -107,3 +107,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderizarCursos(cursos);
 });
+*/
